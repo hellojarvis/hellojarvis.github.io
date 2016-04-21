@@ -7,7 +7,7 @@ requirejs.config({
 requirejs(["superagent"], function(request) {
   setInterval(function() {
     setServingText(request);
-  }, 1000);
+  }, 100000);
 });
 
 function setServingText(request) {
