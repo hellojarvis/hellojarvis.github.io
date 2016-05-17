@@ -12,6 +12,10 @@ requirejs(["superagent"], function(request) {
 });
 
 function setServingText(request) {
-    var servingText = "Jarvis has served over 10000 reminders.";
+  request
+  .get("https://hellojarvis.herokuapp.com/metrics")
+  .end(function(err, res) {
+    var servingText = "Jarvis has served " + res.body['num_reminders'] + " reminders.";
     document.getElementById('served').textContent = servingText;
+  });
 }
