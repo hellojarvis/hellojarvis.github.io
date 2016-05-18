@@ -15,7 +15,7 @@ function setServingText(request) {
   request
   .get("https://hellojarvis.herokuapp.com/metrics")
   .end(function(err, res) {
-    var servingText = "Jarvis served " + res.body['num_reminders'] + " reminders to " + res.body['num_users'] + " users.";
+    var servingText = "Jarvis sent " + res.body['num_reminders'] + " reminders to " + res.body['num_users'] + " users.";
     document.getElementById('served').textContent = servingText;
   });
 }
