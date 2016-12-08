@@ -26,8 +26,8 @@ requirejs(["superagent"], function(request) {
 		token: function(token) {
       console.log(token);
       request
-      .post('https://hellojarvis.herokuapp.com/donate')
-      .send(token)
+      .get('https://hellojarvis.herokuapp.com/donate')
+      .query({token: token.id})
       .end(function(err, res) {
         console.log(err);
         console.log(res);
