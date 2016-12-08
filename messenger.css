@@ -71,6 +71,26 @@ ul li::before {
     color: #fff;
     background-color: #3994ff
 }
+.donate-button {
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    width: 260px;
+    height: 54px;
+    line-height: 54px;
+    background-color: #53B621;
+    border: 0;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px
+}
+.donate-button:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #53B621
+}
 .mockuuups {
     font-size: 13px;
     color: #5F5D5D;
