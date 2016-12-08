@@ -20,7 +20,7 @@ requirejs(["superagent"], function(request) {
   }, 100000);
 
 	var handler = StripeCheckout.configure({
-		key: 'pk_test_TKp9AXtzoJkgWJN2W2RAr03p',
+		key: 'pk_live_iLu2F9irgeKRRyYxmnAUXQpt',
 		image: 'jarvis.jpg',
 		locale: 'auto',
 		token: function(token) {
