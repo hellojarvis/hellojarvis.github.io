@@ -21,16 +21,14 @@ requirejs(["superagent"], function(request) {
 
 	var handler = StripeCheckout.configure({
 		key: 'pk_test_TKp9AXtzoJkgWJN2W2RAr03p',
-		image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+		image: 'jarvis.jpg',
 		locale: 'auto',
 		token: function(token) {
-      console.log(token);
       request
       .get('https://hellojarvis.herokuapp.com/donate')
       .query({token: token.id})
       .end(function(err, res) {
-        console.log(err);
-        console.log(res);
+        alert('Thanks for donating! Your donation is much appreciated.');
       });
 		}
 	});
